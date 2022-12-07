@@ -76,16 +76,17 @@ function showCountry(country) {
 
 function showCountries(list) {
  refs.countries.innerHTML = list
-  .map(({ flags: { svg }, name: { official } }) => {
+   .map(({ flags: { svg }, name: { official } }) => {
     return `
      <li class="country-list__item">
           <img src="${svg}" width="30" alt="${official}"> ${official}
         </li>
         `;
-  })
- .join('');
+    })
+   .join('');
 }
 
 function clearCountries() {
 refs.countries.innerHTML = '';
 }
+
